@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGPA Calculator</title>
+    <!--css link-->
+    <link rel="stylesheet" href="./styles.css">
+    <!--js link-->
+    <script src="./app.js" defer></script>
+    <!--google font-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="calculator">
+    <div class="homecontainer">
+        <h3>CGPA Calculator</h3>
+    </div>
+    <div class="inputdiv" id="course-wrapper">
+        <form action="">
+       
+        <p class="labels">Creditpoint: Grade:</p>
+        <input class="credits-units" for="credit-units" type="text" placeholder="Credit Units" >
+        <select class="grade" required>
+            <option value="select" class="grade">Select</option>
+            <option  class="grade" value="10">O</option>
+            <option  class="grade" value="9">A+</option>
+            <option  class="grade" value="8">A</option>
+            <option  class="grade" value="7">B+</option>
+            <option  class="grade" value="6">B</option>
+        </select>
+        </form>
+    </div>
+    <div class="buttondiv">
+    <button class="icon-btn add-btn" onclick="addCrouse()">
+        <div class="add-icon"></div>
+        <div class="btn-txt">Add Course</div>
+    </button>
+    </div>
+    <div class="calbtndiv">
+    <button onclick="calcCgpa()" class="calcbtn" onclick="calccgpa()">Calculate CGPA</button>
+    </div>
+    <div class="total">
+        <p id="totalcalc">Your CGPA is:</p>
+    </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,229 @@
+body{
+    background: rgb(100,142,238);
+background: linear-gradient(90deg, rgba(100,142,238,1) 0%, rgba(75,81,94,1) 100%, rgba(148,187,233,1) 100%);
+    font-family: 'Poppins', sans-serif;
+}
+
+.homecontainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.labels{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    word-spacing: 100px;
+    margin-right: 4%;
+    color: white;
+    
+}
+.calculator{
+    background-color: rgba(245, 243, 243, 0.445);
+    width: 50%;
+    height: auto;
+    border: 2px solid #3D515C;
+    margin: 100px auto;
+    
+}
+input{
+    margin-left: 28%;
+    border: none;
+    text-align: center;
+    width: 100px;
+ 
+    
+}
+select{
+    margin-left: 14%;
+    margin-bottom: 5%;
+    border: none;
+}
+.buttondiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.icon-btn {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #cdcdcd;
+    background: white;
+    border-radius: 25px;
+    overflow: hidden;
+    position: relative;
+    transition: width 0.2s ease-in-out;
+    font-weight: 500;
+    font-family: inherit;
+    color: black;
+  }
+  
+  .add-btn:hover {
+    width: 120px;
+  }
+  
+  .add-btn::before,
+  .add-btn::after {
+    transition: width 0.2s ease-in-out, border-radius 0.2s ease-in-out;
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 10px;
+    top: calc(50% - 2px);
+    background: rgb(46, 89, 139);
+  }
+  
+  .add-btn::after {
+    right: 14px;
+    overflow: hidden;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+  }
+  
+  .add-btn::before {
+    left: 14px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+  }
+  
+  .icon-btn:focus {
+    outline: none;
+  }
+  
+  .btn-txt {
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  
+  .add-btn:hover::before,
+  .add-btn:hover::after {
+    width: 4px;
+    border-radius: 2px;
+  }
+  
+  .add-btn:hover .btn-txt {
+    opacity: 1;
+  }
+  
+  .add-icon::after,
+  .add-icon::before {
+    transition: all 0.2s ease-in-out;
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 2px;
+    top: calc(50% - 10px);
+    background: rgb(46, 89, 139);
+    overflow: hidden;
+  }
+  
+  .add-icon::before {
+    left: 22px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+  }
+  
+  .add-icon::after {
+    right: 22px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+  }
+  
+  .add-btn:hover .add-icon::before {
+    left: 15px;
+    height: 4px;
+    top: calc(50% - 2px);
+  }
+  
+  .add-btn:hover .add-icon::after {
+    right: 15px;
+    height: 4px;
+    top: calc(50% - 2px);
+  }
+.calbtndiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calcbtn{
+    --color: #0b57ad;
+    font-family: inherit;
+    display: inline-block;
+    width: 8em;
+    height: 2.6em;
+    line-height: 2.5em;
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid var(--color);
+    transition: color .5s;
+    z-index: 1;
+    font-size: 17px;
+    border-radius: 6px;
+    font-weight: 500;
+    color: var(--color);
+   }
+   
+   .calcbtn:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: var(--color);
+    height: 150px;
+    width: 200px;
+    border-radius: 50%;
+   }
+   
+   .calcbtn:hover {
+    color: #fff;
+   }
+   
+   .calcbtn:before {
+    top: 100%;
+    left: 100%;
+    transition: all .7s;
+   }
+   
+   .calcbtn:hover:before {
+    top: -30px;
+    left: -30px;
+   }
+   
+   button:active:before {
+    background: #3a0ca3;
+    transition: background 0s;
+   }
+
+  #totalcalc{
+    color: white;
+    text-align: center;
+    font-weight: bolder;
+    font-size: larger;
+
+  }
+@media screen and (max-width:800px){
+    .calculator{
+        background-color: rgba(245, 243, 243, 0.445);
+        width: 90%;
+        height: auto;
+        border: 2px solid #3D515C;
+        margin: 100px auto;
+        
+    }
+    .labels{  margin-right: 9%;
+        word-spacing: 60px;
+    }
+    input{
+        margin-left: 11%;
+        width: 100px;
+        
+    }
+    select{
+        margin-left: 17%;
+    }
+ 
+}
